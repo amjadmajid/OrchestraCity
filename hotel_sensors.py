@@ -6,7 +6,7 @@ import json
 
 # Connect the Grove Ultrasonic Rangers to digital ports D5 and D6
 dht         = 4  # The Sensor goes on digital port 4.
-parking_D5  = 5
+parking_D5  = 5  #
 charging_D6 = 6
 
 # MQTT settings
