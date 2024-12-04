@@ -3,14 +3,14 @@ import paho.mqtt.client as mqtt
 from influxdb_client import InfluxDBClient, Point, WritePrecision
 from influxdb_client.client.write_api import SYNCHRONOUS
 
-bucket = "hotel_data"
-org = "amj"
-token = "0jwjsNpZoO6RM6UOXueZz8ez95YS0lNG0DHN5nIWDtr3OBEcC8_ozxDa6Aa46gdn0xio0UNDrDXW6-90UIcRRg=="
+bucket = <influxDB bucket name>
+org = <influxDB user name>
+token = <influxDB token>
 client = InfluxDBClient(url="http://localhost:8086", token=token)
 write_api = client.write_api(write_options=SYNCHRONOUS)
 
 # MQTT settings
-MQTT_BROKER = "10.0.0.52"
+MQTT_BROKER = <RaspberryPi ip>
 MQTT_PORT = 1883
 TOPICS = ["parking", "charging", "sensor/raw_distance", "sensor/temperature_humidity" ]
 
